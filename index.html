@@ -6,9 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Finally</h1>
+    <nav>
+      <div class="branding">
+        <h1>CIX ACC.</h1>
+      </div>
+      <input type="checkbox" id="sidebar-active" class="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-btn">
+        <h3>menu</h3>
+      </label>
 
-    <button id="signOutBtn">Sign Out</button>
+      <label for="sidebar-active" id="overlay" class="overlay"></label>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-btn">
+          <h3>close</h3>
+        </label>
+
+        <a href="" class="home-link"><h2>Home</h2></a>
+        <a href=""><h2>Products</h2></a>
+        <a href=""><h2>Purchases</h2></a>
+        <a href=""><h2>Sales</h2></a>
+        <a href=""><h2>Account</h2></a>
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+    </nav>
+
+    <main></main>
+
+    <footer></footer>
 
     <script type="module" src="/src/index.js"></script>
   </body>

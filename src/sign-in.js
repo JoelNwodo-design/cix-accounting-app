@@ -4,6 +4,8 @@ import { requireGuest } from "./session";
 import { signIn } from "./auth";
 import { redirectTo } from "./auth";
 
+import '../styles/global.css'
+
 
 async function initializePage() {
     getCurrentSession()
