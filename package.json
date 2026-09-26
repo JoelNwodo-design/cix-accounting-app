@@ -1,0 +1,29 @@
+{
+  "name": "cix-accounting-app",
+  "version": "1.0.0",
+  "description": "In most businesses, you sell a product or service, and the total amount you're paid is your revenue. You subtract the cost of that product or service to get the gross profit, then subtract business expenses—things like advertising, packaging, rent, etc.—to get the net profit.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelNwodo-design/cix-accounting-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JoelNwodo-design/cix-accounting-app/issues"
+  },
+  "homepage": "https://github.com/JoelNwodo-design/cix-accounting-app#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2"
+  },
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
