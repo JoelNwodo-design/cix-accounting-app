@@ -1,0 +1,119 @@
+
+
+main{
+    margin-top: 20px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 8px;
+    text-align: left;
+}
+td, th{
+    background-color: var(--light-background);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+table{
+    width: 100%;
+    min-width: fit-content; 
+}
+
+tr:hover .tableBtn{
+    display: block;
+}
+
+
+#productName, #baseUnit, #id, #number{
+    font-size: clamp(1.35rem, 2.5ww + 0.5rem, 1.875rem);
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--secondary-text-color);
+}
+
+#addProductName, #addBaseUnit, #editProductName, #editBaseUnit{
+    width: 200px;
+    border: 1px solid;
+    border-color: var(--secondary-color);
+    height: fit-content;
+    border-radius: 2.5px;
+    font-size: 15px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.editBtn, .deleteBtn{
+    background: none;
+}
+.deleteBtn:hover svg{
+    color: var(--danger-color);
+}
+.editBtn:hover svg{
+    color: var(--primary-text-color);
+}
+.modalBtn{
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.plusSvg{
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+}
+
+.modal, .addProductModal, .confirm-delete{
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    background-color: var(--primary-color);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: var(--secondary-color);
+}
+
+.addProductBtn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    background: none;
+}
+.addProductBtn:hover{
+    background-color: var(--accent-color);
+}
+
+.overlay, .comfirmOverlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+.overlay:hover, .comfirmOverlay:hover{
+    cursor: pointer;
+}

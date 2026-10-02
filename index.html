@@ -6,9 +6,51 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Finally</h1>
+    <nav>
+      <div class="branding">
+        <h1>CIX ACC.</h1>
+      </div>
+      <input type="checkbox" id="sidebar-active" class="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-btn">
+        <i data-lucide="square-chevron-left" class="menu-btn"></i>
+      </label>
 
-    <button id="signOutBtn">Sign Out</button>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-btn">
+          <i data-lucide="square-chevron-right" class="menu-btn"></i>
+        </label>
+
+        <a href="index.html" class="home-link"
+          ><i data-lucide="house"></i>
+          <h2>Home</h2></a
+        >
+        <a href="product.html"
+          ><i data-lucide="shelving-unit"></i>
+          <h2>Products</h2></a
+        >
+        <a href=""
+          ><i data-lucide="ruler"></i>
+          <h2>Units</h2></a
+        >
+        <a href=""
+          ><i data-lucide="shopping-basket"></i>
+          <h2>Purchases</h2></a
+        >
+        <a href=""
+          ><i data-lucide="receipt"></i>
+          <h2>Sales</h2></a
+        >
+        <a href=""
+          ><i data-lucide="square-user"></i>
+          <h2>Account</h2></a
+        >
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+    </nav>
+
+    <main></main>
+
+    <footer></footer>
 
     <script type="module" src="/src/index.js"></script>
   </body>
