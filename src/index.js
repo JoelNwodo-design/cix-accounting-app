@@ -5,8 +5,12 @@ import { requireAuth } from "./session";
 
 import '../styles/global.css'
 
+import { createIcons, icons } from "lucide";
+
 
 async function initializePage() {
+    createIcons({icons})
+    
     getCurrentSession()
     requireAuth()
 

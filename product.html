@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="branding" id="branding">
+        <h1>CIX ACC.</h1>
+      </div>
+      <input type="checkbox" id="sidebar-active" class="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-btn">
+        <i data-lucide="square-chevron-left" class="menu-btn"></i>
+      </label>
+
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-btn">
+          <i data-lucide="square-chevron-right" class="menu-btn"></i>
+        </label>
+
+        <a href="index.html" class="home-link"><i data-lucide="house"></i><h2>Home</h2></a>
+        <a href="product.html"><i data-lucide="shelving-unit"></i><h2>Products</h2></a>
+        <a href=""><i data-lucide="ruler"></i><h2>Units</h2></a>
+        <a href=""><i data-lucide="shopping-basket"></i><h2>Purchases</h2></a>
+        <a href=""><i data-lucide="receipt"></i><h2>Sales</h2></a>
+        <a href=""><i data-lucide="square-user"></i><h2>Account</h2></a>
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+    </nav>
+
+    <main>
+      <h2>Products List</h2>
+      <div class="table-container">
+        <table>
+          <tbody id="tableBody">
+            <tr>
+              <th><h3>S/N</h3></th>
+              <th><h3>Product Name</h3></th>
+              <th><h3>Base Unit</h3></th>
+              <th></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <template id="tableRow">
+        <tr>
+          <th id="number"></th>
+          <th id="productName"></th>
+          <th id="baseUnit"></th>
+          <th id="edit">
+            <button type="button" class="editBtn"><i data-lucide="pencil" class="tableBtn"></i></button
+            ><button class="deleteBtn"><i data-lucide="trash" class="tableBtn"></i></button>
+          </th>
+        </tr>
+      </template>
+
+      <div id="overlay" class="overlay"></div>
+      <div id="errorOverlay" class="error-overlay"></div>
+      <div id="comfirmOverlay" class="comfirmOverlay"></div>
+      <div class="modal">
+        <form id="productForm">
+          <label>
+            <h3>Product name</h3>
+            <input type="text" name="productName" id="editProductName" autocomplete="off" size="50" autocapitalize="word""/> <br>
+          </label>
+
+          <label>
+            <h3>Base unit</h3>
+            <input type="text" name="baseUnit" id="editBaseUnit" autocomplete="off" size="50" autocapitalize="word" /> <br>
+          </label>
+
+          <button type="button" class="modalBtn" id="saveEdit">Add Product</button>
+          <button type="button" class="modalBtn" id="cancelEditBtn">Cancel</button>
+        </form>
+      </div>
+      <div class="addProductModal">
+        <form id="addProductForm">
+          <label>
+            <h3>Product name</h3>
+            <input type="text" name="productName" id="addProductName" autocomplete="off" size="50" autocapitalize="word" /><br>
+          </label>
+
+          <label>
+            <h3>Base unit</h3>
+            <input type="text" name="baseUnit" id="addBaseUnit" autocomplete="off" size="50" autocapitalize="word"/><br>
+          </label>
+
+          <button type="button" class="modalBtn" id="saveProductBtn">Add Product</button>
+          <button type="button" class="modalBtn" id="cancelSaveBtn">Cancel</button>
+        </form>
+      </div>
+
+      <button id="addProductBtn" class="addProductBtn"><i data-lucide="circle-plus" class="plusSvg"></i></button>
+
+      <div id="errorModal" class="error-modal">
+        <label>
+          <h3 id="errorMessage"></h3>
+          <button id="cancelError" class="cancelError">Cancel</button>
+        </label>
+      </div>
+
+
+      <div class="confirm-delete">
+        <label>
+          Are you sure you want to delete
+          <button id="cancelDelBtn">Cancel</button><button id="confirmDelBtn">Delete</button>
+        </label>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="/src/product.js"></script>
+  </body>
+</html>
